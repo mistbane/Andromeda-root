@@ -1,0 +1,87 @@
+// in powershell use command:
+// oh-my-posh init pwsh --config C:\Users\david\AppData\Local\Programs\oh-my-posh\themes/david.omp.json | Invoke-Expression
+// type Get-poshthemes to see all the themes
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#3A86FF",
+          "style": "plain",
+          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "background": "#242424",
+          "foreground": "#f1184c",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " {{ .UserName }} <#ffbb00>\u276f</>",
+          "type": "session"
+        },
+        {
+          "background": "#242424",
+          "foreground": "#f1184c",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": "- root \uf0e7",
+          "type": "root"
+        },
+        {
+          "background": "#242424",
+          "foreground": "#FFBB00",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "time_format": "Jan-02 15:04:05 (Mon) "
+          },
+          "style": "powerline",
+          "template": "{{ .CurrentDate | date .Format }} <#ffbb00>\u276f</>",
+          "type": "time"
+        },
+        {
+          "background": "#242424",
+          "foreground": "#33DD2D",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "style": "powerline",
+        //   "template": "{{ .Path }}",
+          "template": "\ue5ff {{ .Path }} <#ffbb00>\u276f</>",
+          "type": "path"
+        },
+        {
+          "background": "#242424",
+          "foreground": "#3A86FF",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "powerline",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} <#ffbb00>\u276f</>",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#f1184c",
+          "style": "plain",
+          "template": "\ue0b0",
+          //"template": "\u279c",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
