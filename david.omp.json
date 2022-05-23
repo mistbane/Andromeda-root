@@ -14,11 +14,15 @@
         //   "type": "os"
         // },
         {
-          "background": "#242424",
-          "foreground": "#f1184c",
+          "background": "#FF9248",
+          // "background": "#242424",
+          "foreground": "#FFFFFF",
+          // "foreground": "#f1184c",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": " {{ .UserName }} <#ffbb00>\u276f</>",
+          // "template": " {{ .UserName }} <#000000>\u276f</>",
+          "template": " {{ .UserName }} <#FFFFFF><b>\u276f</b></>",
+          // "template": " {{ .UserName }} <#ffbb00>\u276f</>",
           "type": "session"
         },
         {
@@ -34,10 +38,10 @@
           "foreground": "#FFBB00",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "time_format": "Jan-02 15:04:05 (Mon) "
+            "time_format": "Jan-02 15:04:05 (Mon)"
           },
           "style": "powerline",
-          "template": "{{ .CurrentDate | date .Format }} <#ffbb00>\u276f</>",
+          "template": " {{ .CurrentDate | date .Format }} <#ffbb00>\u276f</>",
           "type": "time"
         },
         {
@@ -50,7 +54,8 @@
           },
           "style": "powerline",
         //   "template": "{{ .Path }}",
-          "template": "\ue5ff {{ .Path }} <#ffbb00>\u276f</>",
+          "template": "{{ .Path }} <#33DD2D>\u276f\u276f</>",
+          // "template": "\ue5ff {{ .Path }} <#ffbb00>\u276f</>",
           "type": "path"
         },
         {
