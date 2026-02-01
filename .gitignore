@@ -2,3 +2,4 @@
 !david.omp.json
 !gspread.cfg
 !.gitignore
+!.gemini\**

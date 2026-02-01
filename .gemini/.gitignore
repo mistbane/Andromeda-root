@@ -1,0 +1,34 @@
+# --- Sensitive Data (NEVER TRACK THESE) ---
+# Contains your auth tokens and session keys
+auth.json
+oauth_creds.json
+state.json
+credentials.json
+.env
+*.key
+
+# --- Antigravity Temporary Files ---
+# These change every time you type; tracking them causes constant conflicts
+antigravity/conversations/
+antigravity/cache/
+antigravity/brain/
+antigravity/sessions/
+antigravity/backups/
+
+# --- Logs and System Noise ---
+*.log
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+
+# --- Python Environment Noise ---
+# In case you run scripts directly in the skills folder
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# --- IDE Settings ---
+# Only ignore if you want different IDE behaviors on different machines
+settings.json
