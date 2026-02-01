@@ -1,34 +1,104 @@
-# --- Sensitive Data (NEVER TRACK THESE) ---
-# Contains your auth tokens and session keys
+### --- Sensitive Data (NEVER TRACK THESE) ---
+### Contains your auth tokens and session keys
+##auth.json
+##oauth_creds.json
+##state.json
+##credentials.json
+##.env
+##*.key
+##google_accounts.json
+##
+### --- Antigravity Temporary Files ---
+### These change every time you type; tracking them causes constant conflicts
+##antigravity/conversations/
+##antigravity/cache/
+##antigravity/brain/
+##antigravity/sessions/
+##antigravity/backups/
+##antigravity-browser-profile/
+##
+### --- Logs and System Noise ---
+##*.log
+##tmp/
+##temp/
+##.DS_Store
+##Thumbs.db
+##
+### --- Python Environment Noise ---
+### In case you run scripts directly in the skills folder
+##__pycache__/
+##*.pyc
+##.venv/
+##env/
+##
+### --- IDE Settings ---
+### Only ignore if you want different IDE behaviors on different machines
+##settings.json
+##installation_id
+# =================================================================
+# 🛡️ IDENTITY & SENSITIVE DATA (STRICT IGNORE)
+# =================================================================
+# OAuth & Account Tokens
 auth.json
 oauth_creds.json
 state.json
 credentials.json
 .env
 *.key
+google_accounts.json
+oauth_tokens.json
+.oauth-credentials/
+client_secret*.json
+*.pem
+*.p12
+tmp
+# Machine/Install Identifiers
+installation_id
+.device_id
 
-# --- Antigravity Temporary Files ---
-# These change every time you type; tracking them causes constant conflicts
+# Environment & Keys
+.env
+secrets.json
+api_key.txt
+
+# =================================================================
+# 🤖 ANTIGRAVITY AGENT CLUTTER (LOCAL ONLY)
+# =================================================================
+# Large media and auto-generated tracking
+antigravity/code_tracker/
+antigravity/logs/
+anti-gravity-browser-profile/
 antigravity/conversations/
-antigravity/cache/
-antigravity/brain/
-antigravity/sessions/
 antigravity/backups/
-
-# --- Logs and System Noise ---
+antigravity-browser-profile/
+antigravity/implicit
+antigravity/browser_recordings
+antigravity/brain/
+antigravity/annotations
+# =================================================================
+# 📈 TRADING DATA (LOCAL ONLY)
+# =================================================================
+# Prevents leaking TXO positions or history
+Portfolio-*.csv
+*.xlsx
 *.log
-tmp/
-temp/
+
+# =================================================================
+# ✅ ESSENTIALS TO TRACK (DO NOT ADD TO IGNORE)
+# =================================================================
+# The following will be tracked because they are NOT in this file:
+# - package-lock.json (Locks your dependencies)
+# - package.jsongg (Project config)
+# - .gemini/antigravity/browserAllowlist.txt (Your safe-site list)
+# - *.py (Your dji_turning.py and other logic)
+# - *.md (Your custom skill prompts)
+
+# =================================================================
+# 💻 SYSTEM & TEMP
+# =================================================================
+__pycache__/
+node_modules/
+venv/
+.venv/
 .DS_Store
 Thumbs.db
-
-# --- Python Environment Noise ---
-# In case you run scripts directly in the skills folder
-__pycache__/
-*.pyc
-.venv/
-env/
-
-# --- IDE Settings ---
-# Only ignore if you want different IDE behaviors on different machines
-settings.json
