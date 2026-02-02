@@ -26,7 +26,7 @@
 
 # [ENVIRONMENT: ANTIGRAVITY IDE]
 ## Documentation Architecture (Professional 5)
-Maintain all documentation in the `DOCumentations/` folder. These 5 files are the **Source of Truth**:
+Maintain all documentation in the `DOCs/` folder. These 5 files are the **Source of Truth**:
 1. **Architecture.md**: Systems overview, Registry Enum mappings, and module logic (Merged Deep Dive/Schema).
 2. **Protocol.md**: David's Style Guide, Guard Clause examples, and functional standards.
 3. **Journal.md**: Chronological session logs, AI artifacts, and Troubleshooting/Lessons Learned.
